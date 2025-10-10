@@ -11,19 +11,15 @@ class Cache:
         self._dict = {}
     
     def put(self, key, value) -> None:
-        di = self._dict[key] = value
-        return di
+        self._dict[key] = value
 
     def get(self, key, default=None):
-        ge = self._dict.get(key, default)
-        return ge
+        return self._dict.get(key, default)
 
     def __len__(self) -> int:
-        le = len(self._dict)
-        return le
+        return = len(self._dict)
 
     def clear(self) -> None:
-        cl = self._dict.clear
-        return cl
+        self._dict.clear()
 
 __all__ = ["Cache", "print_version_info", "VERSION"]
