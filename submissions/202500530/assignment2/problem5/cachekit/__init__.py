@@ -1,7 +1,7 @@
 VERSION = "3.0"
 
 def print_version_info() -> None: #(간단 출력)
-    print(VERSION)
+    print(f"{VERSION}")
 
 #gpt
 # dict의 method에 무엇이 있는지 물어보고 그에 대한 개념을 물어보았습니다.
