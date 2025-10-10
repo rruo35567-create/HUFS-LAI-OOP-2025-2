@@ -15,7 +15,7 @@ class Cache:
         return di
 
     def get(self, key, default=None):
-        ge = self._dict.get(key, default = "None")
+        ge = self._dict.get(key, default = None)
         return ge
 
     def __len__(self) -> int:
