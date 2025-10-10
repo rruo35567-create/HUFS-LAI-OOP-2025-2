@@ -17,7 +17,7 @@ class Cache:
         return self._dict.get(key, default)
 
     def __len__(self) -> int:
-        return = len(self._dict)
+        return len(self._dict)
 
     def clear(self) -> None:
         self._dict.clear()
