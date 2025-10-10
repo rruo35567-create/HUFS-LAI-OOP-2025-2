@@ -56,6 +56,8 @@ class Recall(Metric):
     def compute(self, y_true: list[int], y_pred: list[int]) -> float:
         TP = sum(1 for t, p in zip(y_true, y_pred) if t == self.positive_class and p == self.positive_class)
         FN = sum(1 for t, p in zip(y_true, y_pred) if t == self.positive_class and p != self.positive_class)
+        if TP + FN == 0:
+            return 0.0
         result = TP / (TP + FN)
         return result
 
