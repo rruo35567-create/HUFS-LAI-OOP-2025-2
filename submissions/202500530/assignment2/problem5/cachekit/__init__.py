@@ -20,7 +20,7 @@ class Cache:
         return self._dict
 
     def get(self, key, default=None):
-        self._dict.get(key, default = None)
+        self._dict.get(key, default = "None")
         return self._dict
 
     def __len__(self) -> int:
