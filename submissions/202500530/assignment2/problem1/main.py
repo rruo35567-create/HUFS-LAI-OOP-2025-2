@@ -5,30 +5,49 @@ Problem 1 — Accumulator (stateful counter for AI pipelines)
 - Educate: @property (read-only) + guarded setter that blocks misuse.
 """
 
-# gpt 사용
-# @가 무슨 역할을 하는지 이해하지 못하여 copilot에게 개념에 대한 내용을 물어보았습니다.
-# 에러 메시지를 발생시키기 위한 방법과 이에 따른 run_test()에 관한 내용에 대해 도움받았습니다.
-# try, except, ok, assert 에 대한 개념에 대해 물어보았습니다.
-
 class Accumulator:
     def __init__(self, start: float = 0.0) -> None:
-        self._total = start
+        """
+        Initialize the accumulator with a starting value.
+        """
+        # TODO: 시작값을 인스턴스 변수에 저장하세요
+        # 힌트: self._total = start (private 변수 사용)
+        raise NotImplementedError
 
     @property
     def total(self) -> float:
-        return self._total
-        
+        """
+        Read-only view of the current accumulated value.
+        """
+        # TODO: 내부 total 값을 반환하세요
+        # 힌트: return self._total
+        raise NotImplementedError
+
     @total.setter
     def total(self, value: float) -> None:
-        raise AssertionError("직접 할당은 불가합니다.")
+        """
+        Educational guard: prevent direct assignment.
+        """
+        # TODO: 직접 할당을 막기 위해 예외를 발생시키세요
+        # 힌트: raise AssertionError("적절한 에러 메시지")
+        raise NotImplementedError
 
     def add(self, x: float) -> float:
-        self._total += x
-        return self._total
+        """
+        Add x to the accumulator and return the new total.
+        """
+        # TODO: 내부 상태를 업데이트하고 새 합계를 반환하세요
+        # 힌트: self._total += x, 그리고 return self._total
+        raise NotImplementedError
 
     def reset(self) -> None:
-        self._total = 0.0
-        return self._total
+        """
+        Reset the accumulator to 0.0.
+        """
+        # TODO: 내부 total을 0.0으로 리셋하세요
+        # 힌트: self._total = 0.0
+        raise NotImplementedError
+
 
 if __name__ == "__main__":
     # -------------------------------
@@ -56,5 +75,5 @@ if __name__ == "__main__":
 
         print("All Problem 1 tests passed.")
 
-    #run_tests()
+    # run_tests()
     pass
